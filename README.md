@@ -1,5 +1,7 @@
 # CareerOS - Oleg Syoma
 
+[DEMO-LINK](https://holyraveos.github.io/CareerOS_Take-home/)
+
 ## Overview
 
 This project is a React-based application for managing quests. It includes a custom hook for fetching data and various components for displaying quest items and related information.
