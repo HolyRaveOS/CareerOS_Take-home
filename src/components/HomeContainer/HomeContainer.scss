@@ -1,0 +1,14 @@
+.home-container {
+	border: 1px solid var(--geyser);
+	max-width: 862px;
+	width: 100%;
+	border-radius: 16px;
+	padding: 24px;
+
+	transition: box-shadow 0.3s;
+
+	&:hover {
+		box-shadow: 0 0 8px 0 #9747ff;
+	}
+
+}

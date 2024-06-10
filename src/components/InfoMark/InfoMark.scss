@@ -1,0 +1,31 @@
+.info-mark {
+	position: relative;
+	max-width: 200px;
+	width: 100%;
+
+	&__icon {
+		cursor: pointer;
+
+		&:hover {
+			&+.info-mark__text {
+				transform: scale(1);
+			}
+		}
+	}
+
+	&__text {
+		position: absolute;
+		font-family: "Lato", sans-serif;
+		color: var(--sirocco);
+		margin-top: 5px;
+		background-color: var(--white);
+		padding: 5px;
+		border: 1px solid var(--geyser);
+		border-radius: 5px;
+		font-size: 14px;
+		transform: scale(0);
+		transform-origin: top left;
+		transition: transform 0.3s;
+	}
+
+}
