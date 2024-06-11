@@ -6,7 +6,7 @@ import { HomeContainer } from './components/HomeContainer';
 import { Title } from './components/Title';
 import { QuestsItemsList } from './components/QuestsItemsList';
 function App() {
-  const { data, loading, isError } = useFetch<Quest>(
+  const { data, isLoading, isError } = useFetch<Quest>(
     'http://localhost:3000/quests'
   );
 
@@ -23,7 +23,7 @@ function App() {
         </Title>
         <QuestsItemsList
           listData={data}
-          loading={loading}
+          isLoading={isLoading}
           isError={isError}
         />
       </HomeContainer>

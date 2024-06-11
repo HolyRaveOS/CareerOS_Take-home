@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 
 export const useFetch = <T>(url: string) => {
   const [data, setData] = useState<T[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isError, setIsError] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
+      setIsLoading(true);
       setIsError(false);
 
       try {
@@ -21,11 +21,11 @@ export const useFetch = <T>(url: string) => {
         setIsError(true);
       }
 
-      setLoading(false);
+      setIsLoading(false);
     };
 
     fetchData();
   }, [url]);
 
-  return { data, loading, isError };
+  return { data, isLoading, isError };
 };

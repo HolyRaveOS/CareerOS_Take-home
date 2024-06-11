@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import './Loader.scss';
+
 interface Props {
   className?: string;
 }

@@ -6,20 +6,20 @@ import './QuestsItemsList.scss';
 
 interface Props {
   listData: Quest[];
-  loading: boolean;
+  isLoading: boolean;
   isError: boolean;
 }
 
 export const QuestsItemsList: React.FC<Props> = ({
   listData,
-  loading,
+  isLoading,
   isError,
 }) => {
   return (
     <>
-      {loading && <Loader />}
+      {isLoading && <Loader />}
       {isError && <p>Something went wrong try later</p>}
-      {!loading && !isError && (
+      {!isLoading && !isError && (
         <ul className='quests-items'>
           {listData.map((item) => (
             <li
